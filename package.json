@@ -1,0 +1,22 @@
+{
+  "name": "website",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build:stage": "vite build --mode staging",
+    "build:prod": "vite build --mode production",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "element3": "^0.0.40",
+    "vue": "^3.2.6",
+    "vue-router": "^4.0.11"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.6.0",
+    "@vue/compiler-sfc": "^3.2.6",
+    "sass": "^1.38.2",
+    "vite": "^2.5.1"
+  }
+}
