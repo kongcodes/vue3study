@@ -70,10 +70,10 @@ let navItem = [
   { url: '/common-apis', name: '侦听器' },
   { url: '/vuerouter', name: 'VueRouter' },
 ]
-console.log(route.path)
+// console.log(route.path)
 activeIndex = route.path || '/'
 function handleSelect(key, keyPath) {
-  console.log('fn-------------handleSelect', key, keyPath)
+  // console.log('fn-------------handleSelect', key, keyPath)
 }
 </script>
 <style lang="scss" scoped>

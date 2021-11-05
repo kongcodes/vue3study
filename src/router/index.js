@@ -40,7 +40,7 @@ const routes = [
     component: Layout,
     children: [
       { path: '', component: VuerouterPage },
-      { path: '/courseinfo/:title', component: CourseInfo },
+      { path: '/courseinfo/:title', component: CourseInfo, name: 'CourseInfo' },
     ],
   },
 

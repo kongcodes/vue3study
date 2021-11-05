@@ -7,11 +7,15 @@
         >跳转到javascript语言详情页</router-link
       >
       <br />
-      <a href="javascript:void(0)" style="cursor: pointer" @click="toInfo"
+      <a href="javascript:void(0)" @click="toInfo"
         >通过事件click点击跳转到python语言详情页</a
       >
       <br />
       <router-link :to="{ path: '/aaa' }">跳转到404</router-link>
+      <br />
+      <a href="javascript:void(0)" @click="toParams"
+        >导航时传参params 和 query</a
+      >
     </li>
   </ul>
 </template>
@@ -24,6 +28,13 @@ const router = useRouter()
 
 function toInfo() {
   router.push({ path: '/courseinfo/python' })
+}
+function toParams() {
+  router.push({
+    name: 'CourseInfo',
+    params: { title: 'params传参' },
+    query: { data: 123 },
+  })
 }
 </script>
 
