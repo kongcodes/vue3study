@@ -9,7 +9,7 @@
 
 <script setup>
 // import { getList } from '@/api/home.js'
-const query = { pagenum: 1 }
+// const query = { pagenum: 1 }
 // getList(query)
 //   .then((res) => {
 //     console.log(res)

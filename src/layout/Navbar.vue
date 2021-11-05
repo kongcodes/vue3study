@@ -65,8 +65,10 @@ let activeIndex = ref('/')
 let navItem = [
   { url: '/', name: '首页' },
   { url: '/test', name: '测试页' },
-  // { url: '/1', name: '1' },
-  // { url: '/2', name: '2' },
+  { url: '/reactivity-apis', name: '响应性API' },
+  { url: '/composition-apis', name: '组合式API' },
+  { url: '/common-apis', name: '侦听器' },
+  { url: '/vuerouter', name: 'VueRouter' },
 ]
 console.log(route.path)
 activeIndex = route.path || '/'
