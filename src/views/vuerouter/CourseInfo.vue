@@ -4,7 +4,7 @@
 </template>
 
 <script setup>
-console.log('-----created')
+console.log('-----created');
 </script>
 
 <style lang="scss"></style>

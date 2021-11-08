@@ -17,25 +17,32 @@
         >导航时传参params 和 query</a
       >
     </li>
+    <li>
+      <h4>全局守卫</h4>
+      <router-link :to="{ name: 'LoginSuccess' }">
+        跳转登录成功页，如果未登录就跳转登录
+      </router-link>
+    </li>
   </ul>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
-const router = useRouter()
+const router = useRouter();
 
 function toInfo() {
-  router.push({ path: '/courseinfo/python' })
+  router.push({ path: '/courseinfo/python' });
 }
 function toParams() {
   router.push({
     name: 'CourseInfo',
     params: { title: 'params传参' },
     query: { data: 123 },
-  })
+  });
 }
+// 路由守卫
 </script>
 
 <style scoped lang="scss">

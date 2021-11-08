@@ -42,7 +42,7 @@
           active-text-color="#ffd04b"
           :router="true"
         >
-          <el-submenu>
+          <el-submenu index="">
             <template v-slot:title>
               <i class="el-icon-s-fold icon-nav"></i>
             </template>
@@ -57,11 +57,11 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { useRoute } from 'vue-router'
-const route = useRoute()
+import { ref } from 'vue';
+import { useRoute } from 'vue-router';
+const route = useRoute();
 
-let activeIndex = ref('/')
+let activeIndex = ref('/');
 let navItem = [
   { url: '/', name: '首页' },
   { url: '/test', name: '测试页' },
@@ -69,9 +69,9 @@ let navItem = [
   { url: '/composition-apis', name: '组合式API' },
   { url: '/common-apis', name: '侦听器' },
   { url: '/vuerouter', name: 'VueRouter' },
-]
+];
 // console.log(route.path)
-activeIndex = route.path || '/'
+activeIndex = route.path || '/';
 function handleSelect(key, keyPath) {
   // console.log('fn-------------handleSelect', key, keyPath)
 }

@@ -1,14 +1,17 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-import Layout from '@/layout/index.vue'
-import Home from '@/views/home/Home.vue'
-import Test from '@/views/test/Test.vue'
-import CommonApisPage from '@/views/common-apis-page/CommonApisPage.vue'
-import ReactivityApisPage from '@/views/reactivity-apis-page/ReactivityApisPage.vue'
-import CompositionApisPage from '@/views/composition-apis-page/CompositionApisPage.vue'
-import VuerouterPage from '@/views/vuerouter/VuerouterPage.vue'
-import CourseInfo from '@/views/vuerouter/CourseInfo.vue'
+import { createRouter, createWebHashHistory } from 'vue-router';
+import Layout from '@/layout/index.vue';
+import Home from '@/views/home/Home.vue';
+import Test from '@/views/test/Test.vue';
+import CommonApisPage from '@/views/common-apis-page/CommonApisPage.vue';
+import ReactivityApisPage from '@/views/reactivity-apis-page/ReactivityApisPage.vue';
+import CompositionApisPage from '@/views/composition-apis-page/CompositionApisPage.vue';
+import VuerouterPage from '@/views/vuerouter/VuerouterPage.vue';
+import CourseInfo from '@/views/vuerouter/CourseInfo.vue';
 
-import NotFound from '@/components/NotFound.vue'
+import NotFound from '@/components/NotFound.vue';
+const Login = () => import('@/views/login/Login.vue');
+const LoginSuccess = () => import('@/views/login/LoginSuccess.vue');
+
 const routes = [
   {
     path: '/',
@@ -44,10 +47,20 @@ const routes = [
     ],
   },
 
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login,
+  },
+  {
+    path: '/loginsuccess',
+    name: 'LoginSuccess',
+    component: LoginSuccess,
+  },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
-]
+];
 
 export default createRouter({
   history: createWebHashHistory(),
   routes,
-})
+});
