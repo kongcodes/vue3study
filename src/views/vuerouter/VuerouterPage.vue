@@ -28,7 +28,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { onBeforeRouteLeave, useRouter } from 'vue-router';
 
 const router = useRouter();
 
@@ -42,7 +42,19 @@ function toParams() {
     query: { data: 123 },
   });
 }
-// 路由守卫
+// 组件内路由守卫
+onBeforeRouteLeave(() => {
+  console.log(123)
+})
+</script>
+
+<script>
+
+// export default {
+//   beforeRouteLeave(to, from, next) {
+//   console.log(123)
+// }
+// }
 </script>
 
 <style scoped lang="scss">

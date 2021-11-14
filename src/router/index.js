@@ -56,6 +56,9 @@ const routes = [
     path: '/loginsuccess',
     name: 'LoginSuccess',
     component: LoginSuccess,
+    beforeEnter: (to, from) => {
+      console.log("----登录成功页面的路由独享的守卫")
+    }
   },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ];
