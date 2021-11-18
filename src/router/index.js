@@ -26,7 +26,9 @@ const routes = [
   {
     path: '/reactivity-apis',
     component: Layout,
-    children: [{ path: '', component: ReactivityApisPage }],
+    children: [
+      { path: '', component: ReactivityApisPage, name: 'ReactivityApisPage' },
+    ],
   },
   {
     path: '/composition-apis',
@@ -42,8 +44,12 @@ const routes = [
     path: '/vuerouter',
     component: Layout,
     children: [
-      { path: '', component: VuerouterPage },
-      { path: '/courseinfo/:title', component: CourseInfo, name: 'CourseInfo' },
+      { path: '', component: VuerouterPage, meta: { transition: 'slide' } },
+      {
+        path: '/courseinfo/:title',
+        component: CourseInfo,
+        name: 'CourseInfo',
+      },
     ],
   },
 
@@ -56,9 +62,12 @@ const routes = [
     path: '/loginsuccess',
     name: 'LoginSuccess',
     component: LoginSuccess,
+    meta: {
+      auth: true,
+    },
     beforeEnter: (to, from) => {
-      console.log("----登录成功页面的路由独享的守卫")
-    }
+      console.log('----登录成功页面的路由独享的守卫');
+    },
   },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ];

@@ -73,7 +73,7 @@ let navItem = [
 // console.log(route.path)
 activeIndex = route.path || '/';
 function handleSelect(key, keyPath) {
-  // console.log('fn-------------handleSelect', key, keyPath)
+  // console.log('fn-------------handleSelect', key, keyPath);
 }
 </script>
 <style lang="scss" scoped>
