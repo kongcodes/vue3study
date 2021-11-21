@@ -5,8 +5,10 @@ import router from './router/index';
 
 import element3 from '@/plugins/element3.js';
 
+import { store } from './store/index.js'
+ 
 import './permission.js';
 
 import '@/styles/index.scss';
 
-createApp(App).use(router).use(element3).mount('#app');
+createApp(App).use(router).use(store).use(element3).mount('#app');
