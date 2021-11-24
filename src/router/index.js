@@ -6,6 +6,7 @@ import CommonApisPage from '@/views/common-apis-page/CommonApisPage.vue';
 import ReactivityApisPage from '@/views/reactivity-apis-page/ReactivityApisPage.vue';
 import CompositionApisPage from '@/views/composition-apis-page/CompositionApisPage.vue';
 import VuerouterPage from '@/views/vuerouter/VuerouterPage.vue';
+import VuexPage from '@/views/vuex-page/VuexPage.vue';
 import CourseInfo from '@/views/vuerouter/CourseInfo.vue';
 
 import NotFound from '@/components/NotFound.vue';
@@ -51,6 +52,11 @@ const routes = [
         name: 'CourseInfo',
       },
     ],
+  },
+  {
+    path: '/vuexpage',
+    component: Layout,
+    children: [{ path: '', component: VuexPage }],
   },
 
   {

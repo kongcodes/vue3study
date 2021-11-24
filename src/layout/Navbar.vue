@@ -69,6 +69,7 @@ let navItem = [
   { url: '/composition-apis', name: '组合式API' },
   { url: '/common-apis', name: '侦听器' },
   { url: '/vuerouter', name: 'VueRouter' },
+  { url: '/vuexpage', name: 'Vuex' },
 ];
 // console.log(route.path)
 activeIndex = route.path || '/';
