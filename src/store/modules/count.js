@@ -9,8 +9,21 @@ const mutations = {
   },
 };
 
+const actions = {
+  increment(context) {
+    // context.commit('increment');
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        context.commit('increment');
+        resolve();
+      }, 500);
+    });
+  },
+};
+
 export default {
   namespaced: true,
   state,
   mutations,
+  actions,
 };
