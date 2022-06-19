@@ -12,6 +12,7 @@ import CourseInfo from '@/views/vuerouter/CourseInfo.vue';
 import NotFound from '@/components/NotFound.vue';
 const Login = () => import('@/views/login/Login.vue');
 const LoginSuccess = () => import('@/views/login/LoginSuccess.vue');
+const CompView = () => import('@/views/comp-view/index.vue');
 
 const routes = [
   {
@@ -74,6 +75,11 @@ const routes = [
     beforeEnter: (to, from) => {
       console.log('----登录成功页面的路由独享的守卫');
     },
+  },
+  {
+    path: '/compview',
+    component: Layout,
+    children: [{ path: '', component: CompView }],
   },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ];

@@ -70,6 +70,7 @@ let navItem = [
   { url: '/common-apis', name: '侦听器' },
   { url: '/vuerouter', name: 'VueRouter' },
   { url: '/vuexpage', name: 'Vuex' },
+  { url: '/compview', name: '组件化' },
 ];
 // console.log(route.path)
 activeIndex = route.path || '/';
