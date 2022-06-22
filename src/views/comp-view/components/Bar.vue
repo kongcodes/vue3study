@@ -1,32 +1,27 @@
 <template>
   <div class="box">
     <p>我是Bar组件</p>
-    <button @click="add">{{ num }}</button>
-    <p>$props: {{$props}}</p>
 
-    <p>父组件 $parent {{$parent.parData}}</p>
+    <p>$attrs {{$attrs}}</p>
+    <p v-bind="$attrs">将$attrs对象绑定到当前标签</p>
   </div>
 </template>
 
 <script setup>
-const props = defineProps({
-  num: Number,
-})
-// console.log(props)
-const emits = defineEmits(['add'])
-// console.log(emits)
+import { useAttrs, toRaw } from 'vue';
 
-function add() {
-  emits('add')
-}
+const attrs = useAttrs();
+console.log(attrs.sex);
+console.log(attrs);
+console.log(toRaw(attrs));
 </script>
 
 <style lang="scss" scoped>
 .box {
   width: 200px;
-  height: 150px;
+  min-height: 150px;
   margin-left: 15px;
-  border: 5px dotted #2f5;
+  border: 5px dotted #ada;
   text-align: center;
   // line-height: 100px;
 }

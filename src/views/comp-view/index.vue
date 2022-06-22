@@ -12,8 +12,8 @@
       <li>
         <h4>使用组件</h4>
         <div style="display: flex;">
-          <Foo :num="num" @add="add" />
-          <Bar :num="num" @add="add" />
+          <Foo a="a" b="b" :num="num" @add="add" />
+          <Bar :age=18 sex="boy" />
         </div>
       </li>
     </ul>

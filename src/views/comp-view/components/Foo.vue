@@ -5,6 +5,8 @@
     <p>$props: {{$props}}</p>
 
     <p>父组件 $parent {{$parent.parData}}</p>
+
+    <p>$attrs {{$attrs}}</p>
   </div>
 </template>
 
@@ -24,7 +26,7 @@ function add() {
 <style lang="scss" scoped>
 .box {
   width: 200px;
-  height: 150px;
+  min-height: 150px;
   border: 5px dotted #2f5;
   text-align: center;
   // line-height: 100px;
