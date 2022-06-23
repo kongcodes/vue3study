@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>组合式API</h1>
+    <h1>组件化开发</h1>
     <ul style="text-align: left">
       <li>
         <h4>{{ msg }}</h4>
@@ -13,7 +13,18 @@
         <h4>使用组件</h4>
         <div style="display: flex;">
           <Foo a="a" b="b" :num="num" @add="add" />
-          <Bar :age=18 sex="boy" />
+          <Bar :age=18 sex="boy">
+            <p>slot的内容</p>
+          </Bar>
+          <Ren></Ren>
+          <SlotComp>
+            <template v-slot:head>
+              <p>head插槽</p>
+            </template>
+            <template v-slot:foot>
+              <p>foot插槽</p>
+            </template>
+          </SlotComp>
         </div>
       </li>
     </ul>
@@ -22,8 +33,10 @@
 
 <script setup>
 import Foo from './components/Foo.vue';
-import { onMounted, onUpdated, ref } from 'vue';
+import { onMounted, onUpdated, provide, ref } from 'vue';
 import Bar from './components/Bar.vue';
+import Ren from './components/ren.vue';
+import SlotComp from './components/SlotComp.vue';
 
 const msg = 'hello world!';
 const count = ref(0);
@@ -50,6 +63,10 @@ const parData = ref("父组件数据");
 defineExpose({
   parData,
 })
+
+// provide
+provide("user", "kong");
+provide("pass", 123456);
 
 // 使用setup 不使用script setup语法糖
 // export default {
