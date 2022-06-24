@@ -18,13 +18,21 @@
           </Bar>
           <Ren></Ren>
           <SlotComp>
-            <template v-slot:head>
-              <p>head插槽</p>
+            <template v-slot:head = "slotProps">
+              <p>head插槽 slotProps: {{slotProps.item}}</p>
+              <p v-for="i in slotProps.item">{{i}}</p>
             </template>
             <template v-slot:foot>
               <p>foot插槽</p>
+              {{msg}}
             </template>
           </SlotComp>
+          <ModelComp v-model="msg" v-model:show="showFlag"></ModelComp>
+          <!-- <ModelComp 
+            :modelValue="msg"
+             @update:modelValue="msg = $event"
+          >
+          </ModelComp> -->
         </div>
       </li>
     </ul>
@@ -37,9 +45,11 @@ import { onMounted, onUpdated, provide, ref } from 'vue';
 import Bar from './components/Bar.vue';
 import Ren from './components/ren.vue';
 import SlotComp from './components/SlotComp.vue';
+import ModelComp from './components/ModelComp.vue';
 
-const msg = 'hello world!';
+const msg = ref('hello world!');
 const count = ref(0);
+const showFlag = ref(false);
 function addcount() {
   count.value++;
 }
