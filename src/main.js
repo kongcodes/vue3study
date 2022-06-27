@@ -13,4 +13,9 @@ import './permission.js';
 
 import '@/styles/index.scss';
 
-createApp(App).use(router).use(store).use(element3).use(minstore).mount('#app');
+const app = createApp(App);
+
+import loading from "./directives/loading.js";
+app.directive("loading",loading);
+
+app.use(router).use(store).use(element3).use(minstore).mount('#app');

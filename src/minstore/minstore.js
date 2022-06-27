@@ -9,7 +9,7 @@ const changeStr = (val) => {
 
 const minstore = {
   state,
-  changeStr,
+  // changeStr,
 };
 
 export default {
