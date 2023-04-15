@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>test</h1>
-    <el-button type="primary" @click="go">测试element3引入</el-button>
+    <el-button type="primary" @click="go">测试element-plus引入</el-button>
   </div>
 </template>
 

@@ -3,7 +3,9 @@ import App from './App.vue';
 
 import router from './router/index';
 
-import element3 from '@/plugins/element3.js';
+import ElementPlus from '@/plugins/element-plus.js';
+// import 'element-plus/dist/index.css'
+// import 'element-plus/theme-chalk/display.css'
 
 import { store } from './store/index.js';
 
@@ -18,4 +20,4 @@ const app = createApp(App);
 import loading from "./directives/loading.js";
 app.directive("loading",loading);
 
-app.use(router).use(store).use(element3).use(minstore).mount('#app');
+app.use(router).use(store).use(ElementPlus).use(minstore).mount('#app');

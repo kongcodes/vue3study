@@ -68,7 +68,6 @@ import ModelComp from './components/ModelComp.vue';
 
 // svg 
 import IconLoading from "../../components/LoadingIcon.vue";
-import Button from "../../../node_modules/element3/src/components/Button/src/Button.vue";
 
 const msg = ref('hello world!');
 const showFlag = ref(false);
