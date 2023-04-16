@@ -5,7 +5,7 @@ import router from './router/index';
 
 import ElementPlus from '@/plugins/element-plus.js';
 // import 'element-plus/dist/index.css'
-// import 'element-plus/theme-chalk/display.css'
+import 'element-plus/theme-chalk/display.css'
 
 import { store } from './store/index.js';
 
