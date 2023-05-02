@@ -13,6 +13,7 @@ import NotFound from '@/components/NotFound.vue';
 const Login = () => import('@/views/login/Login.vue');
 const LoginSuccess = () => import('@/views/login/LoginSuccess.vue');
 const CompView = () => import('@/views/comp-view/index.vue');
+const Drag = () => import('@/views/drag/index.vue');
 
 const routes = [
   {
@@ -80,6 +81,11 @@ const routes = [
     path: '/compview',
     component: Layout,
     children: [{ path: '', component: CompView }],
+  },
+  {
+    path: '/drag',
+    component: Layout,
+    children: [{ path: '', component: Drag }],
   },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ];
